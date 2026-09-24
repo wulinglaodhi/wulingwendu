@@ -1,0 +1,18 @@
+name: Build Tweak
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Theos
+        uses: hbang/theos-action@master
+      - name: Build
+        run: make package
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: TweakDeb
+          path: packages/*.deb
