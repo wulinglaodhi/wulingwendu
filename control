@@ -1,7 +1,9 @@
-Package: com.custom.5gmove
-Name: 5GMove
-Version: 1.0
-Architecture: iphoneos-arm64e
-Maintainer: Custom
-Description: 灵动岛启用时，可移动状态栏5G图标，iPhone14Pro+，最低iOS16.0
+Package: com.hello.dynamicislandtemp
+Name: DynamicIslandTemp
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 常驻灵动岛显示设备温度，支持 Rootless / RootHide
+Maintainer: Hello
+Author: Hello
+Section: Tweaks
 Depends: mobilesubstrate
