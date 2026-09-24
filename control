@@ -1,0 +1,7 @@
+Package: com.custom.5gmove
+Name: 5GMove
+Version: 1.0
+Architecture: iphoneos-arm64e
+Maintainer: Custom
+Description: 灵动岛启用时，可移动状态栏5G图标，iPhone14Pro+，最低iOS16.0
+Depends: mobilesubstrate
