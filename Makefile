@@ -1,13 +1,16 @@
-ARCHS = arm64 arm64e
-TARGET = iphone:clang:16.0:16.0
-INSTALL_TARGET_PROCESSES = SpringBoard
+ARCHS = arm64
+TARGET = iphone:clang:16.5:14.0
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = 5GMove
+TWEAK_NAME = DynamicIslandTemp
 
-5GMove_FILES = Tweak.xm
-5GMove_CFLAGS = -fobjc-arc
-5GMove_FRAMEWORKS = UIKit
+DynamicIslandTemp_FILES = Tweak.x
+DynamicIslandTemp_CFLAGS = -fobjc-arc
+DynamicIslandTemp_FRAMEWORKS = UIKit Foundation
+DynamicIslandTemp_PRIVATE_FRAMEWORKS = IOKit
 
 include $(THEOS_MAKE_PATH)/tweak.mk
+
+SUBPROJECTS += DynamicIslandTempPrefs
+include $(THEOS_MAKE_PATH)/aggregate.mk
